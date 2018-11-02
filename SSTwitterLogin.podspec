@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  					The reusable Twitter login components for iOS is the easiest way to get data from Twitter. It will reduce developers time to integrate Twitter login in their app. Just add two files to your project and it's done. 
                    DESC
 
-  s.homepage     = "https://github.com/simformsolutions//SSTwitterLogin"
+  s.homepage     = "https://github.com/simformsolutions/SSTwitterLogin"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -132,6 +133,6 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-   s.dependency "TwitterKit", "~> 3.4.0"
+  s.dependency "TwitterKit", "~> 3.4.0"
 
 end

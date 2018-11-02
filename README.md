@@ -30,7 +30,7 @@ Import two files in your project and it's done
 
 # Usage example
 
-**Add following in your application:didFinishLaunchingWithOptions launchOptions: **
+**Add following in your application:didFinishLaunchingWithOptions launchOptions:**
 
 ```  
   TwitterLoginHelper.sharedInstance.twitterStartwith(consumerKey: "YOUR_APP_CONSUMER_KEY", consumerSecret: "YOUR_APP_CONSUMER_SECRET")
