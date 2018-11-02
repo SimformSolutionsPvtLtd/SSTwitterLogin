@@ -1,5 +1,5 @@
 # SSTwitterLogin
-The Reusable Twitter Login Components for iOS is the easiest way to get data from Twitter.
+The reusable Twitter login components for iOS is the easiest way to get data from Twitter.
 
 # Features
 •	 Get default user data from Twitter
@@ -30,13 +30,13 @@ Import two files in your project and it's done
 
 # Usage example
 
-Add following in your application:didFinishLaunchingWithOptions launchOptions:
+**Add following in your application:didFinishLaunchingWithOptions launchOptions: **
 
 ```  
   TwitterLoginHelper.sharedInstance.twitterStartwith(consumerKey: "YOUR_APP_CONSUMER_KEY", consumerSecret: "YOUR_APP_CONSUMER_SECRET")
 ```
 
-Add following in your application:openURL:options function
+**Add following in your application:openURL:options function**
 
 ```
   return TwitterLoginHelper.sharedInstance.twitterConfigurationWithOptions(application,open: url, options:options)
@@ -44,7 +44,7 @@ Add following in your application:openURL:options function
 
 
 
-To Do Twitter Login
+**To Do Twitter Login**
 
 ```
 TwitterLoginHelper.sharedInstance.doLoginWithTwitter { (isSuccess, error) in
@@ -57,7 +57,7 @@ TwitterLoginHelper.sharedInstance.doLoginWithTwitter { (isSuccess, error) in
 }
 ```
 
-To Fetch LoggedIn User's Details 
+**To Fetch LoggedIn User's Details**
 
 ```
 TwitterLoginHelper.sharedInstance.getLoggedInUserDetailswith(completion: { (userData, error) in
