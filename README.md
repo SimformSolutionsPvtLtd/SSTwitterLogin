@@ -21,12 +21,13 @@ Import two files in your project and it's done
 5.	Connect App Delegate Using TwitterLoginManger.swift Methods
 6.	Congratulations!
 
-# Pod
+# CocoaPods
 1.	Configure Twitter App Settings for iOS (https://apps.twitter.com/)
 2.	Install Pod ‘SSTwitterLogin’
 3.	Configure Xcode Project
 4.	Connect App Delegate Using TwitterLoginManger.swift Methods
 5.	Congratulations!
+
 
 # Usage example
 
