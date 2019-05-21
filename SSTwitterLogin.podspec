@@ -66,6 +66,7 @@ Pod::Spec.new do |s|
 
    s.platform     = :ios
    s.platform     = :ios, "9.0"
+   s.swift_version = '5.0'
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -133,6 +134,7 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "TwitterKit", "~> 3.4.0"
+  s.dependency 'TwitterKit', '3.4.2'
+  s.framework = 'TwitterKit'
 
 end

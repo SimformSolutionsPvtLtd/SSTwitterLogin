@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import TwitterKit
 
-
 public struct TwitterUserData {
     let firstName: String
     let lastName: String
@@ -34,7 +33,7 @@ public class TwitterLoginHelper: NSObject {
         TWTRTwitter.sharedInstance().start(withConsumerKey: consumerKey, consumerSecret: consumerSecret)
     }
     
-    public func twitterConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    public func twitterConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }
     
