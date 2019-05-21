@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "SSTwitterLogin"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "The reusable Twitter login components for iOS is the easiest way to get data from Twitter."
 
   s.description  = <<-DESC
@@ -21,17 +21,17 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT (LICENSE)"
 
+   s.platform     = :ios, "9.0"
+   s.swift_version = '5.0'
 
 
   s.author       = { "Darshit Vadodaria" => "reg@simform.in" }
-  s.platform     = :ios
-  s.platform     = :ios, "9.0"
 
   s.source       = { :git => "https://github.com/simformsolutions/SSTwitterLogin.git", :tag => "#{s.version}" }
 
-
   s.source_files  = "SSTwitterLogin"
   
-  s.dependency "TwitterKit", "~> 3.4.0"
+  s.dependency 'TwitterKit', '3.4.2'
+  s.framework = 'TwitterKit'
 
 end

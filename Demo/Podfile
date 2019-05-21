@@ -6,6 +6,6 @@ target 'TwitterDemo' do
   use_frameworks!
 
   # Pods for TwitterDemo
-  pod 'TwitterKit', '~> 3.4.0'
+  pod 'TwitterKit', '~> 3.4.2'
 
 end
