@@ -77,8 +77,7 @@ public class TwitterLoginHelper: NSObject {
         }
     }
     
-    func logoutFromTwitter() {
-        
+    public func logoutFromTwitter() {
         let url:URL = URL.init(string: TwitterURL.Logout)!
         let cookies = HTTPCookieStorage.shared.cookies(for: url)
         for cookie in cookies! {
@@ -86,4 +85,5 @@ public class TwitterLoginHelper: NSObject {
         }
         TWTRTwitter.sharedInstance().sessionStore.logOutUserID(lastUser!)
     }
+    
 }
