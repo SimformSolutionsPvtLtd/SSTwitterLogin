@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "SSTwitterLogin"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "The reusable Twitter login components for iOS is the easiest way to get data from Twitter."
 
   s.description  = <<-DESC
