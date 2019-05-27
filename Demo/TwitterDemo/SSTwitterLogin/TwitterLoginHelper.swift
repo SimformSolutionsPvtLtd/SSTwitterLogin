@@ -10,17 +10,16 @@ import Foundation
 import UIKit
 import TwitterKit
 
-
 public struct TwitterUserData {
-    let firstName: String
-    let lastName: String
-    let email: String
-    let userID: Int
-    let profilePicURL:String?
-    let dateOfBirth:Date?
+    public let firstName: String
+    public let lastName: String
+    public let email: String
+    public let userID: Int
+    public let profilePicURL:String?
+    public let dateOfBirth:Date?
 }
 
-public class TwitterLoginHelper: NSObject {
+open class TwitterLoginHelper: NSObject {
     
     public static let sharedInstance : TwitterLoginHelper = {
         let instance = TwitterLoginHelper()
@@ -30,15 +29,15 @@ public class TwitterLoginHelper: NSObject {
     private var lastUser:String? = ""
     
     
-    public func twitterStartwith(consumerKey: String, consumerSecret: String) {
+    open func twitterStartwith(consumerKey: String, consumerSecret: String) {
         TWTRTwitter.sharedInstance().start(withConsumerKey: consumerKey, consumerSecret: consumerSecret)
     }
     
-    public func twitterConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    open func twitterConfigurationWithOptions(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
     }
     
-    public func doLoginWithTwitter(completion:@escaping (_ isSuccess: Bool, _ error: Error?) -> ()) {
+    open func doLoginWithTwitter(completion:@escaping (_ isSuccess: Bool, _ error: Error?) -> ()) {
         TWTRTwitter.sharedInstance().logIn { (session, error) in
             if (session != nil) {
                 self.lastUser = session?.userID
@@ -50,7 +49,7 @@ public class TwitterLoginHelper: NSObject {
         }
     }
     
-    public func getLoggedInUserDetailswith(permission: [String: Any] = TwitterDefaultPermission.userPermission, completion:@escaping (_ userData: TwitterUserData?, _ error: Error?) -> ()) {
+    open func getLoggedInUserDetailswith(permission: [String: Any] = TwitterDefaultPermission.userPermission, completion:@escaping (_ userData: TwitterUserData?, _ error: Error?) -> ()) {
         let store = TWTRTwitter.sharedInstance().sessionStore
         if store.session(forUserID: self.lastUser!) != nil   {
             let client = TWTRAPIClient.withCurrentUser()
@@ -77,7 +76,7 @@ public class TwitterLoginHelper: NSObject {
         }
     }
     
-    public func logoutFromTwitter() {
+    open func logoutFromTwitter() {
         let url:URL = URL.init(string: TwitterURL.Logout)!
         let cookies = HTTPCookieStorage.shared.cookies(for: url)
         for cookie in cookies! {
