@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TwitterKit
+import SSTwitterLogin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

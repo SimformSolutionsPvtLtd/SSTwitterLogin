@@ -6,6 +6,7 @@ target 'TwitterDemo' do
   use_frameworks!
 
   # Pods for TwitterDemo
-  pod 'TwitterKit', '~> 3.4.2'
+  
+  pod 'SSTwitterLogin', :path => '../'
 
 end

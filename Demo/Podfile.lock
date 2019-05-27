@@ -1,20 +1,27 @@
 PODS:
+  - SSTwitterLogin (2.0.4):
+    - TwitterKit (= 3.4.2)
   - TwitterCore (3.2.0)
   - TwitterKit (3.4.2):
     - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
-  - TwitterKit (~> 3.4.2)
+  - SSTwitterLogin (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - TwitterCore
     - TwitterKit
 
+EXTERNAL SOURCES:
+  SSTwitterLogin:
+    :path: "../"
+
 SPEC CHECKSUMS:
+  SSTwitterLogin: 3e263d3a0c6358b25b6da5391a360fd6205c7a87
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 0e85a54a50015349372375d6a13d8803bb395392
+PODFILE CHECKSUM: 2084677fc57d4aea4a5b7649b67984c2e7879612
 
 COCOAPODS: 1.7.0

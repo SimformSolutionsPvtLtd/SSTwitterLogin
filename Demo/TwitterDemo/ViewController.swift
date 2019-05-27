@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SSTwitterLogin
 
 public struct TwitterKeys {
     static let KConsumerKey = "YOUR_APP_CONSUMER_KEY"
