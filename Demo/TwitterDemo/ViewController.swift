@@ -40,7 +40,8 @@ class ViewController: UIViewController {
     func getUserDetails() {
         TwitterLoginHelper.sharedInstance.getLoggedInUserDetailswith(completion: { (userData, error) in
             if userData != nil {
-                print("UserData: \(userData?.userID ?? 0)")
+                print("UserData: userID = \(userData?.userID ?? 0)")
+                print("UserData: email = \(userData?.email ?? "abc@simformsolutions.com")")
             } else {
                 print(error?.localizedDescription ?? "")
             }
